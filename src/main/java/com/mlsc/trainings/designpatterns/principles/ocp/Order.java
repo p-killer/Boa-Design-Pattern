@@ -3,7 +3,7 @@ package com.mlsc.trainings.designpatterns.principles.ocp;
 public class Order {
 
     private Object lineItems;
-    private Object shipping;
+    private Shipping shipping;
 
     public long getTotal() {
 
@@ -22,24 +22,27 @@ public class Order {
         return null;
     }
 
-    public void setShippingType(String type) {
+    public void setShippingType(Shipping type) {
+
+        this.shipping = type;
 
     }
 
     /**
      * shippingType == "ground"
-     *    total > 100
-     *       return 0
-     *    return max(10, getTotalWeight) * 1.5)
-     *
+     * total > 100
+     * return 0
+     * return max(10, getTotalWeight) * 1.5)
+     * <p>
      * shippingType == "air"
-     *     return max (20, getTotalWeight() * 3);
+     * return max (20, getTotalWeight() * 3);
      *
      * @return
      */
     public long getShippingCost() {
+        return shipping.getCost(this);
 
-        return 0;
+//        return 0;
     }
 
 
