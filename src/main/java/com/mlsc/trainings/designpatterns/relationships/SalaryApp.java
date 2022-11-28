@@ -31,13 +31,6 @@ public class SalaryApp {
         filteredEmps.add(e1);
         filteredEmps.add(e2);
 
-
-
-
-
-
-
-
     }
 
 
