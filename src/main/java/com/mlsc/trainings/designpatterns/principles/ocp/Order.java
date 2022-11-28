@@ -5,6 +5,12 @@ public class Order {
     private Object lineItems;
     private Shipping shipping;
 
+    public Order(Shipping shipping) {
+
+        this.shipping = shipping;
+    }
+
+
     public long getTotal() {
 
 
@@ -22,11 +28,11 @@ public class Order {
         return null;
     }
 
-    public void setShippingType(Shipping type) {
-
-        this.shipping = type;
-
-    }
+//    public void setShippingType(Shipping type) {
+//
+//        this.shipping = type;
+//
+//    }
 
     /**
      * shippingType == "ground"
