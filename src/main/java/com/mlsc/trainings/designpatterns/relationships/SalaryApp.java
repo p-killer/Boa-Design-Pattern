@@ -1,5 +1,6 @@
 package com.mlsc.trainings.designpatterns.relationships;
 
+import java.util.AbstractList;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -13,7 +14,8 @@ public class SalaryApp {
     String name;
 
 
-    public void demo() {
+//    public void demo(ArrayList<Employee> emps) {
+    public void demo(AbstractList<Employee> emps) {
 
         List<Employee> allEmps = new ArrayList<>();
 
