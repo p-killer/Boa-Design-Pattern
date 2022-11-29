@@ -1,5 +1,6 @@
 package com.mlsc.trainings.designpatterns.a1.creational.a3.builder.carapp.builders;
 
+import com.mlsc.trainings.designpatterns.a1.creational.a3.builder.carapp.cars.Car;
 import com.mlsc.trainings.designpatterns.a1.creational.a3.builder.carapp.cars.CarType;
 import com.mlsc.trainings.designpatterns.a1.creational.a3.builder.carapp.components.Engine;
 import com.mlsc.trainings.designpatterns.a1.creational.a3.builder.carapp.components.GPSNavigator;
@@ -17,4 +18,8 @@ public class CarBuilder implements Builder {
     private TripComputer tripComputer;
     private GPSNavigator gpsNavigator;
 
+    public Car getResult() {
+
+        return new Car(this.carType, seats, engine, transmission, tripComputer, gpsNavigator);
+    }
 }
