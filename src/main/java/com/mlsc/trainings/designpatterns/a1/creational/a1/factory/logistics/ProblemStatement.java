@@ -1,6 +1,11 @@
 package com.mlsc.trainings.designpatterns.a1.creational.a1.factory.logistics;
 
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
+
 /**
  * <p>
  * Imagine that you’re creating a logistics management application.
@@ -22,9 +27,19 @@ package com.mlsc.trainings.designpatterns.a1.creational.a1.factory.logistics;
  * riddled with conditionals that switch the app’s behavior depending on
  * the class of transportation objects.
  * </p>
+ *
+ * <p><b>Find the solution !</b></p>
  */
 
 public class ProblemStatement {
+
+    public static void main(String[] args) throws Exception{
+
+        Connection con = DriverManager.getConnection("");
+        Statement stmt = con.createStatement();
+        ResultSet rs = stmt.executeQuery("");
+
+    }
 
 
 }
